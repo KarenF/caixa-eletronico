@@ -1,5 +1,6 @@
 package br.com.compasso.caixaeletronico.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +59,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 		return resultado;
 	}
 
+	@Override
+	public List<Usuario> list() {
+		return repository.findAll();
+	}
+	
 	@Override
 	public Optional<Usuario> findById(Long id) {
 		return repository.findById(id);
