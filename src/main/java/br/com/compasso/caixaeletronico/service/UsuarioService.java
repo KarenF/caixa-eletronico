@@ -8,5 +8,9 @@ public interface UsuarioService {
 
 	Usuario save(Usuario usuario);
 	
-	Optional<Usuario> quantidadeNotas(int valor);
+	int[] quantidadeNotas(int valor);
+
+	Optional<Usuario> findById(Long id);
+
+	void deleteById(Long id);
 }

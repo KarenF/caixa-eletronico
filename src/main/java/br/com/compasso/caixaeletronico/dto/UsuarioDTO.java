@@ -1,7 +1,5 @@
 package br.com.compasso.caixaeletronico.dto;
 
-import java.math.BigDecimal;
-
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;

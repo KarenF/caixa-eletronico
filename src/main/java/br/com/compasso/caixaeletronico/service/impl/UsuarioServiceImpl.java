@@ -21,7 +21,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	}
 
 	@Override
-	public Optional<Usuario> quantidadeNotas(int valor) {
+	public int[] quantidadeNotas(int valor) {
 
 		int[] notas = { 100, 50, 20, 10, 5, 2, 1 };
 		int[] resultado = { 0, 0, 0, 0, 0, 0, 0 };
@@ -55,6 +55,16 @@ public class UsuarioServiceImpl implements UsuarioService {
 			System.out.println("Número de notas de " + notas[i] + " é igual a " + resultado[i]);
 		}
 
-		return repository.quantidadeNotas(resultado);
+		return resultado;
+	}
+
+	@Override
+	public Optional<Usuario> findById(Long id) {
+		return repository.findById(id);
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		repository.deleteById(id);
 	}
 }
