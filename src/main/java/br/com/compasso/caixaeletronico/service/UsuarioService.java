@@ -8,8 +8,6 @@ import br.com.compasso.caixaeletronico.entity.Usuario;
 public interface UsuarioService {
 
 	Usuario save(Usuario usuario);
-	
-	int[] quantidadeNotas(int valor);
 
 	Optional<Usuario> findById(Long id);
 

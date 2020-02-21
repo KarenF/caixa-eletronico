@@ -60,6 +60,7 @@ public class UsuarioController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Usuario> detalhar(@PathVariable Long id) {
 		Optional<Usuario> usuario = service.findById(id);
+		
 		if (usuario.isPresent()) {
 			return ResponseEntity.ok(usuario.get());
 		}
